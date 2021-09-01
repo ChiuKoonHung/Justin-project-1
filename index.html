@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Kitchen</title>
+    <script defer src="index.js"></script>
+</head>
+<body>
+    <h1>Your Virtual Kitchen</h1>
+    <div id="selectChoices">
+        <h2>Select choices</h2>
+        <form>
+            <label for="carbs">Choose a carb:</label>
+            <select name="carbs" id="carbs">
+                <option value=""disabled selected hidden>Select</option>
+                <option id="brownRice" value="brownrice">Brown Rice</option>
+                <option id="califlowerRice" value="califlowerrice">Califlower Rice</option>
+                <option id="quinoa" value="quinoa">Quinoa</option>
+            </select>
 
+            <label for="ingredient">Choose an ingredient:</label>
+            <select name="ingredient" id="ingredient">
+                <option value=""disabled selected hidden>Select</option>
+                <option id="chicken" value="chicken">Chicken</option>
+                <option id="bean" value="bean">Bean</option>
+            </select>
+
+            <br><br>
+            <button id="submit" type="submit" >Submit</button>
+        </form>
+    </div>
+
+    <div id="cookInstructions">
+        <p id="printCook"></p>
+    </div>
+    
+</body>
+</html>
