@@ -28,14 +28,16 @@ function listOfInstructions(evt) {    // function to print out instructions afte
     const choiceCarbs = document.getElementById("carbs").value;
     const choiceProtein = document.getElementById("protein").value;
     const stepsForRiceChicken = ["Put rice in cooker for about 30 minutes.", "Marinate chicken breast with salt & pepper.", "Pan sear over medium heat for 5 mins on each side."];
-    const stepsForRiceEgg = ["Put rice in cooker for about 30 minutes.", ""];
+    const stepsForRiceEgg = ["Put rice in cooker for about 30 minutes.", "Simmer water and cook eggs for 7 minutes.", "Peel eggs and place them in zip-lock bag with soy sauce, mirin and water."];
+    const stepsForCaliChicken = [];
+    const stepsForCaliEgg = [];
 
     if (choiceCarbs == "brownrice" && choiceProtein == "chicken") {
         for (let i = 0; i < stepsForRiceChicken.length; i++) {
             const textNode = document.createTextNode(stepsForRiceChicken[i]);
             const liNode = document.createElement("li");
             liNode.appendChild(textNode);
-            document.getElementById("list").appendChild(liNode);      
+            document.getElementById("list").appendChild(liNode);     
         }
         return true;
     }
@@ -48,6 +50,25 @@ function listOfInstructions(evt) {    // function to print out instructions afte
         }
         return true;
     }
+    else if (choiceCarbs == "califlowerrice" && choiceProtein == "chicken") {
+        for (let i = 0; i < stepsForCaliChicken.length; i++) {
+            const textNode = document.createTextNode(stepsForCaliChicken[i]);
+            const liNode = document.createElement("li");
+            liNode.appendChild(textNode);
+            document.getElementById("list").appendChild(liNode);      
+        }
+        return true;
+    }
+    else if (choiceCarbs == "califlowerrice" && choiceProtein == "egg") {
+        for (let i = 0; i < stepsForCaliEgg.length; i++) {
+            const textNode = document.createTextNode(stepsForCaliEgg[i]);
+            const liNode = document.createElement("li");
+            liNode.appendChild(textNode);
+            document.getElementById("list").appendChild(liNode);      
+        }     
+        return true;
+    }   
+    form.button.disabled = true;
 }
 
 window.addEventListener("submit", header);
@@ -62,17 +83,18 @@ function header(evt) {      // function to print header
     }
 }
 
+// window.addEventListener("submit", haha);
 // function haha(evt) {
 //     evt.preventDefault();
 
 //     class Cook {
-//         constructor (choiceCarbs, choiceIngredient) {
+//         constructor (choiceCarbs, choiceProtein) {
 //             choiceCarbs = document.getElementById("carbs").value,
 //             choiceProtein = document.getElementById("protein").value
 //         };
 //         send() {
-//         if (this.choiceCarbs == "brownrice") {
-//         return document.getElementById("printCook").innerHTML = "Put in cooker for about 40 minutes.";
+//         if (this.choiceCarbs == "brownrice" && this.choiceProtein == "chicken") {
+//         return document.getElementById("cookCarbs").innerHTML = "Put in cooker for about 40 minutes.";
 //         }
 //         }
 //     }
