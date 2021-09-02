@@ -17,14 +17,14 @@
                 <option value=""disabled selected hidden>Select</option>
                 <option id="brownRice" value="brownrice">Brown Rice</option>
                 <option id="califlowerRice" value="califlowerrice">Califlower Rice</option>
-                <option id="quinoa" value="quinoa">Quinoa</option>
+                <!-- <option id="quinoa" value="quinoa">Quinoa</option> -->
             </select>
 
-            <label for="ingredient">Choose an ingredient:</label>
-            <select name="ingredient" id="ingredient">
+            <label for="protein">Choose a protein:</label>
+            <select name="protein" id="protein">
                 <option value=""disabled selected hidden>Select</option>
                 <option id="chicken" value="chicken">Chicken</option>
-                <option id="bean" value="bean">Bean</option>
+                <option id="egg" value="egg">Bean</option>
             </select>
 
             <br><br>
@@ -32,8 +32,12 @@
         </form>
     </div>
 
-    <div id="cookInstructions">
-        <p id="printCook"></p>
+    <div id="instructions">
+        <h3 id="CookingInstructions"></h3>
+        <p id="cookCarbs">
+            <ol id="list"></ol>
+        </p>
+        <p id="cookProtein"></p>
     </div>
     
 </body>
