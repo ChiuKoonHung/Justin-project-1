@@ -1,4 +1,4 @@
-
+// select choices
 window.addEventListener("submit", selection);
 function selection(evt) {  // function to check for input
     evt.preventDefault();
@@ -34,8 +34,8 @@ function listOfInstructions(evt) {    // function to print out instructions afte
 
     if (choiceCarbs == "brownrice" && choiceProtein == "chicken") {
         for (let i = 0; i < stepsForRiceChicken.length; i++) {
-            const textNode = document.createTextNode(stepsForRiceChicken[i]);
             const liNode = document.createElement("li");
+            const textNode = document.createTextNode(stepsForRiceChicken[i]);
             liNode.appendChild(textNode);
             document.getElementById("list").appendChild(liNode);     
         }
@@ -43,8 +43,8 @@ function listOfInstructions(evt) {    // function to print out instructions afte
     }
     else if (choiceCarbs == "brownrice" && choiceProtein == "egg") {
         for (let i = 0; i < stepsForRiceEgg.length; i++) {
-            const textNode = document.createTextNode(stepsForRiceEgg[i]);
             const liNode = document.createElement("li");
+            const textNode = document.createTextNode(stepsForRiceEgg[i]);           
             liNode.appendChild(textNode);
             document.getElementById("list").appendChild(liNode);      
         }
@@ -52,8 +52,8 @@ function listOfInstructions(evt) {    // function to print out instructions afte
     }
     else if (choiceCarbs == "califlowerrice" && choiceProtein == "chicken") {
         for (let i = 0; i < stepsForCaliChicken.length; i++) {
-            const textNode = document.createTextNode(stepsForCaliChicken[i]);
             const liNode = document.createElement("li");
+            const textNode = document.createTextNode(stepsForCaliChicken[i]);            
             liNode.appendChild(textNode);
             document.getElementById("list").appendChild(liNode);      
         }
@@ -61,8 +61,8 @@ function listOfInstructions(evt) {    // function to print out instructions afte
     }
     else if (choiceCarbs == "califlowerrice" && choiceProtein == "egg") {
         for (let i = 0; i < stepsForCaliEgg.length; i++) {
-            const textNode = document.createTextNode(stepsForCaliEgg[i]);
             const liNode = document.createElement("li");
+            const textNode = document.createTextNode(stepsForCaliEgg[i]);
             liNode.appendChild(textNode);
             document.getElementById("list").appendChild(liNode);      
         }     
@@ -82,6 +82,21 @@ function header(evt) {      // function to print header
         return document.getElementById("CookingInstructions").innerHTML = "Cooking Instructions";
     }
 }
+
+// random selection
+window.addEventListener("click", random);
+function random(evt) {  
+    evt.preventDefault();
+    
+    generateCarbs = ["brownrice", "califlowerrice"];
+    const haha = generateCarbs[Math.floor(Math.random()*2)];
+    const inputNode = document.createElement("INPUT");
+    inputNode.setAttribute("type", "text");
+    inputNode.setAttribute("value", haha);
+    document.getElementById("ppp").appendChild(inputNode);
+    form.button.disabled = true;
+}
+
 
 // window.addEventListener("submit", haha);
 // function haha(evt) {
